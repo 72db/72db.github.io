@@ -18,6 +18,22 @@ defaults:
     values:
       layout: "default"
 
+# Site Settings
+locale                   : "en-US"
+title                    : "72db"
+title_separator          : "-"
+subtitle                 : " "
+name                     : &name "JJ" # &name is a YAML anchor which can be *referenced later
+description              : &description "dis-infecting social dependency."
+url                      : https://72db.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "/" # the subpath of your site, e.g. "/blog"
+repository               : "72db"
+teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
+logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
+masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
+# breadcrumbs            : false # true, false (default)
+words_per_minute         : 200
+
 # Plugins (previously gems:)
 plugins:
   - jekyll-paginate
