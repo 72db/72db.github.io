@@ -1,5 +1,5 @@
-<nav>
-  {% for item in site.data.navigation %}
-    <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}{% if page.layout == 'post' and site.data.navigation.index == 2 %}class="current"{% endif %}>{{ item.name }}</a>
-  {% endfor %}
-</nav>
+<div class="w3-bar w3-light-grey">
+{% for item in site.data.navigation %}
+	<a href="{{ item.link }}" class="w3-bar-item w3-button{% if page.url == item.link %} w3-dark-grey{% endif %}{% if page.layout == 'post' and site.data.navigation.index == 2 %} w3-dark-grey{% endif %}">{{ item.name }}</a>
+{% endfor %}
+</div>
