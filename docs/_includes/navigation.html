@@ -3,17 +3,18 @@
 	<a href="{{ item.link }}" class="w3-bar-item w3-button{% if page.url == item.link %} w3-dark-grey{% endif %}{% if page.layout == 'post' and site.data.navigation.index == 2 %} w3-dark-grey{% endif %}">{{ item.name }}</a>
 {% endfor %}
 </div>
-<div class="w3-green">
+<div>
 <pre>
 {% for item in site.data.navigation %}
 
 {{ item.index }}
+{{ forloop.index }}
 {{ site.data.navigation.index }}
 
 {% if page.layout == "post" %}
 Lpost {% else %} Lpage {% endif %}
 
-{% if site.data.navigation.index == 2 %}
+{% if forloop.index == 2 %}
 {{ item.name }}
 {% endif %}
 
