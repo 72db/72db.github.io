@@ -1,23 +1,5 @@
 <div class="w3-bar w3-light-grey">
 {% for item in site.data.navigation %}
-	<a href="{{ item.link }}" class="w3-bar-item w3-button{% if page.url == item.link %} w3-dark-grey{% endif %}{% if page.layout == 'post' and site.data.navigation.index == 2 %} w3-dark-grey{% endif %}">{{ item.name }}</a>
+	<a href="{{ item.link }}" class="w3-bar-item w3-button{% if page.url == item.link %} w3-dark-grey{% endif %}{% if page.layout == "post" and forloop.index == 2 %} w3-dark-grey{% endif %}">{{ item.name }}</a>
 {% endfor %}
-</div>
-<div>
-<pre>
-{% for item in site.data.navigation %}
-
-{{ item.index }}
-{{ forloop.index }}
-{{ site.data.navigation.index }}
-
-{% if page.layout == "post" %}
-Lpost {% else %} Lpage {% endif %}
-
-{% if forloop.index == 2 %}
-{{ item.name }}
-{% endif %}
-
-{% endfor %}
-</pre>
 </div>
