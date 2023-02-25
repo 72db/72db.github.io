@@ -1,5 +1,9 @@
-<div class="w3-bar w3-light-grey">
-{% for item in site.data.navigation %}
-	<a href="{{ item.link }}" class="w3-bar-item w3-button{% if page.url == item.link %} w3-dark-grey{% endif %}{% if page.layout == "post" and forloop.index == 2 %} w3-dark-grey{% endif %}">{{ item.name }}</a>
-{% endfor %}
-</div>
+<nav class="mb-4">
+	<ul class="nav border bg-light">
+	{% for item in site.data.navigation %}
+		<li class="nav-item">
+			<a class="nav-link text-{% if page.layout == "post" and forloop.index == 2 %}bg-{% endif %}{% if page.url == item.link %}secondary{% endif %}" href="{{ item.link }}">{{ item.name }}</a>
+		</li>
+	{% endfor %}
+	</ul>
+</nav>
