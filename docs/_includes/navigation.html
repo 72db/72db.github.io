@@ -1,9 +1,0 @@
-<nav class="mb-4">
-	<ul class="nav border bg-light">
-	{% for item in site.data.navigation %}
-		<li class="nav-item">
-			<a class="nav-link{% if page.url == item.link or page.layout == "post" and forloop.index == 2%} text-bg-secondary{% endif %}" href="{{ item.link }}">{{ item.name }}</a>
-		</li>
-	{% endfor %}
-	</ul>
-</nav>
